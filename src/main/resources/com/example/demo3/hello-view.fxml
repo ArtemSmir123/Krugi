@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.MainController">
+      <children>
+         <Canvas fx:id="canvas" height="401.0" layoutX="26.0" layoutY="20.0" width="601.0" />
+      <Button fx:id="button" layoutX="282.0" layoutY="560.0" mnemonicParsing="false" onAction="#pressButton" text="Нарисовать" />
+      <GridPane layoutX="55.0" layoutY="422.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.05067443847656" minWidth="10.0" prefWidth="133.7248077392578" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="105.5" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.75848388671875" minWidth="0.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="239.0" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Первая окружность" GridPane.rowIndex="1" />
+            <Label text="Вторая окружность" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <Label text="Третья окружность" GridPane.rowIndex="3" />
+            <Label prefHeight="17.0" prefWidth="73.0" text="X" GridPane.columnIndex="1" />
+            <Label text="Y" GridPane.columnIndex="2" />
+            <Label text="R" GridPane.columnIndex="3" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="x1" />
+            <TextField fx:id="y1" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="r1" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="x2" />
+            <TextField fx:id="y2" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="r2" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="x3" />
+            <TextField fx:id="y3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="r3" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Label fx:id="fix" layoutX="404.0" layoutY="451.0" prefHeight="87.0" prefWidth="166.0" text="Тут высветятся возможные ошибки" wrapText="true" />
+      <Button layoutX="27.0" layoutY="560.0" mnemonicParsing="false" onAction="#cleans" text="Очистить" />
+      </children></AnchorPane>
